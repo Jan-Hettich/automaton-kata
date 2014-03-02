@@ -14,9 +14,6 @@ class DivisibleBy3
     ACCEPT.include? p
   end
 
-  def nothing
-  end
-
   def next(q,c)
     '0'
   end
