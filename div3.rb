@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 class DivisibleBy3
 
   STATES = [0,1,2]
