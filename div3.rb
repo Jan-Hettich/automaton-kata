@@ -1,12 +1,15 @@
 class Div3
 
-  INPUT_ALPHABET = "01"
+  INPUT_ALPHABET = ['0', '1']
   STATES = [0,1,2]
   START = 0
   ACCEPT = [0]
 
+  # begin in start state
+  # scan input string one symbol at a time and determine next state
+  # accept (or reject) input string based on final state
   def accept?(s)	
-  	raise ArgumentError unless (s.chars - INPUT_ALPHABET.chars).empty?
+  	raise ArgumentError unless (s.chars - INPUT_ALPHABET).empty?
   	final_state = s.chars.reduce(START){|q, c| next_state(q,c)}
   	ACCEPT.include? final_state
   end
